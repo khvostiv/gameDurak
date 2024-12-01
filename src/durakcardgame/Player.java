@@ -1,52 +1,42 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package durakcardgame;
 
 /**
- *
- * @author User
- */
-/**
- * A class that models each Player in the game. Players have an identifier, which should be unique.
- *
- * @author dancye
- * @author Paul Bonenfant Jan 2020
+ * Abstract class representing a generic player in a game.
+ * Provides a framework for player-specific attributes and actions.
  */
 public abstract class Player {
-
-    private String name; //the unique name for this player
+    private String name; // The name of the player
 
     /**
-     * A constructor that allows you to set the player's unique ID
+     * Constructor to initialize the player with a name.
      *
-     * @param name the unique ID to assign to this player.
+     * @param name The name of the player.
      */
     public Player(String name) {
         this.name = name;
     }
 
     /**
-     * @return the player name
+     * Retrieves the name of the player.
+     *
+     * @return The player's name.
      */
     public String getName() {
         return name;
     }
 
     /**
-     * Ensure that the playerID is unique
+     * Sets or updates the player's name.
      *
-     * @param name the player name to set
+     * @param name The new name for the player.
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
-     * The method to be overridden when you subclass the Player class with your specific type of Player and filled in
-     * with logic to play your game.
+     * Abstract method to define the player's behavior during the game.
+     * This must be implemented by subclasses to define specific player actions.
      */
     public abstract void play();
-
 }
